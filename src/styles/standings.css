@@ -1,5 +1,20 @@
+body {
+  background-color: #1B1B41;
+}
+
 td, th {
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  background-color: white;
+}
+
+th {
+  background-color: #E90052;
+  color: white;
+}
+
+.table {
+  margin: px, 10px, 0, 10px;
 }
 
 .Numeric {
@@ -19,4 +34,15 @@ td, th {
 
 .club-name {
   text-align: left;
+}
+
+.header {
+  min-height: 150px;
+  background-color: #E90052;
+}
+
+.header img {
+  max-height: 90px;
+  margin-top: 20px;
+  margin-left: 10px;
 }

@@ -20,6 +20,9 @@ class Standings extends Component {
 
     return (
       <div className="col-md-8 col-md-offset-2">
+        <div className="header">
+          <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/Premier_League_Logo.svg" alt="" />
+        </div>
         <table className="table table-hover">
           <thead>
             <tr>
