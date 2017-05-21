@@ -1,0 +1,22 @@
+td, th {
+  text-align: center;
+}
+
+.Numeric {
+  max-width: 40px;
+}
+
+.standings-icon {
+  max-height: 30px;
+  max-width: 30px;
+  margin-right: 20px;
+}
+
+.icon-row {
+  min-width: 100px;
+  align-content: center;
+}
+
+.club-name {
+  text-align: left;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchStandings } from '../actions';
 import { StandingsRow } from '../components/standings_row';
+import '../styles/standings.css';
 
 class Standings extends Component {
   componentDidMount() {
@@ -18,20 +19,21 @@ class Standings extends Component {
     }
 
     return (
-      <div>
+      <div className="col-md-8 col-md-offset-2">
         <table className="table table-hover">
           <thead>
             <tr>
-              <th>Position</th>
-              <th>Team Name</th>
-              <th>Played</th>
-              <th>Wins</th>
-              <th>Draws</th>
-              <th>Losses</th>
-              <th>GF</th>
-              <th>GA</th>
-              <th>GD</th>
-              <th>Points</th>
+              <th className="Numeric">Position</th>
+              <th className="icon-row"></th>
+              <th className="club-name">Club</th>
+              <th className="Numeric">Played</th>
+              <th className="Numeric">Wins</th>
+              <th className="Numeric">Draws</th>
+              <th className="Numeric">Losses</th>
+              <th className="Numeric">GF</th>
+              <th className="Numeric">GA</th>
+              <th className="Numeric">GD</th>
+              <th className="Numeric">Points</th>
             </tr>
           </thead>
           <tbody>
