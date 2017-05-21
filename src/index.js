@@ -6,21 +6,16 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
 
 import reducers from './reducers';
+import Standings from './containers/standings';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
-
-class Hello extends React.Component {
-  render() {
-    return <div>Hi</div>
-  }
-}
 
 ReactDOM.render(
 <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <div>
         <Switch>
-          <Route path="/" component={Hello} />
+          <Route path="/" component={Standings} />
         </Switch>
       </div>
     </BrowserRouter>
