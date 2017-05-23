@@ -1,7 +1,7 @@
 .header h3 {
   text-align: center;
   color: white;
-  margin-left: 100px;
+  margin-left: 50px;
   margin-top: 70px;
 }
 
@@ -10,6 +10,13 @@
 }
 
 .header-image {
+  margin-left: 10px;
   max-width: 100px;
   float: left;
+}
+
+.back-button {
+  float: right;
+  overflow: auto;
+  margin: 20px 10px 20px 0px;
 }

@@ -1,4 +1,5 @@
 import { FETCH_PLAYERS } from '../actions';
+import _ from 'lodash';
 
 export default function(state = [], action) {
   switch (action.type) {
@@ -6,7 +7,7 @@ export default function(state = [], action) {
     if (!action.payload.data) {
       return state;
     }
-    return action.payload.data.players;
+    return _.sortBy(action.payload.data.players, "jerseyNumber");
 
     default:
       return state;

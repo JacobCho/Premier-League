@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { fetchPlayers, fetchTeamDetails } from '../actions';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { PlayersRow } from '../components/players_row';
 import '../styles/players.css';
 
@@ -18,28 +19,33 @@ class Players extends Component {
 
   render() {
     return (
-      <div className="col-md-4 col-md-offset-4">
-        <div className="header">
-          <div className="header-image">
-            <img src={this.props.teamDetails.crestUrl} alt="" />
+      <div>
+        <div className="col-md-5 col-md-offset-3">
+          <div className="header">
+            <div className="back-button">
+            <Link to="/" className="btn btn-primary">Back To Standings</Link>
+            </div>
+            <div className="header-image">
+              <img src={this.props.teamDetails.crestUrl} alt="" />
+            </div>
+              <h3>
+                {this.props.teamDetails.name}
+              </h3>
           </div>
-            <h3>
-              {this.props.teamDetails.name}
-            </h3>
+          <table className="table table-hover">
+            <thead>
+              <tr>
+                <th className="Numeric">Number</th>
+                <th className="icon-row">Nationality</th>
+                <th>Name</th>
+                <th className="Numeric">Age</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.props.players.map(this.renderBody)}
+            </tbody>
+          </table>
         </div>
-        <table className="table table-hover">
-          <thead>
-            <tr>
-              <th className="Numeric">Number</th>
-              <th className="icon-row">Nationality</th>
-              <th>Name</th>
-              <th className="Numeric">Age</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.props.players.map(this.renderBody)}
-          </tbody>
-        </table>
       </div>
     );
   }
