@@ -1,0 +1,15 @@
+.header h3 {
+  text-align: center;
+  color: white;
+  margin-left: 100px;
+  margin-top: 70px;
+}
+
+.header {
+  overflow: auto;
+}
+
+.header-image {
+  max-width: 100px;
+  float: left;
+}

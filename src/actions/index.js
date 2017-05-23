@@ -3,6 +3,7 @@ import { API_TOKEN } from '../keys';
 
 export const FETCH_STANDINGS = 'FETCH_STANDINGS';
 export const FETCH_PLAYERS = 'FETCH_PLAYERS';
+export const FETCH_TEAM_DETAILS = 'FETCH_TEAM_DETAILS';
 
 export function fetchStandings() {
   const url = 'http://api.football-data.org/v1/soccerseasons/426/leagueTable';
@@ -20,6 +21,16 @@ export function fetchPlayers(id) {
 
   return {
     type: FETCH_PLAYERS,
+    payload: request
+  }
+}
+
+export function fetchTeamDetails(id) {
+  let url = `http://api.football-data.org/v1/teams/${id}`;
+  const request = fetchRequest(url);
+
+  return {
+    type: FETCH_TEAM_DETAILS,
     payload: request
   }
 }
