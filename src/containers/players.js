@@ -32,13 +32,13 @@ class Players extends Component {
                 {this.props.teamDetails.name}
               </h3>
           </div>
-          <table className="table table-hover">
+          <table className="table">
             <thead>
               <tr>
-                <th className="Numeric">Number</th>
-                <th className="icon-row">Nationality</th>
+                <th className="numeric">Number</th>
+                <th className="nationality">Nationality</th>
                 <th>Name</th>
-                <th className="Numeric">Age</th>
+                <th className="numeric">Age</th>
               </tr>
             </thead>
             <tbody>

@@ -17,18 +17,21 @@ th {
   margin: px, 10px, 0, 10px;
 }
 
-.Numeric {
+.numeric {
   max-width: 40px;
+}
+
+.qualify {
+  width: 100px;
 }
 
 .standings-icon {
   max-height: 30px;
   max-width: 30px;
-  margin-right: 20px;
 }
 
 .icon-row {
-  min-width: 100px;
+  min-width: 40px;
   align-content: center;
 }
 
@@ -45,4 +48,12 @@ th {
   max-height: 90px;
   margin-top: 20px;
   margin-left: 10px;
+}
+
+.cl {
+  background-color: #e1f9cf;
+}
+
+.el {
+  background-color: #caf2f9;
 }

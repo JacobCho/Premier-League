@@ -26,17 +26,18 @@ class Standings extends Component {
         <table className="table table-hover">
           <thead>
             <tr>
-              <th className="Numeric">Position</th>
+              <th className="numeric">Position</th>
+              <th className="qualify">European Qualification</th>
               <th className="icon-row"></th>
               <th className="club-name">Club</th>
-              <th className="Numeric">Played</th>
-              <th className="Numeric">Wins</th>
-              <th className="Numeric">Draws</th>
-              <th className="Numeric">Losses</th>
-              <th className="Numeric">GF</th>
-              <th className="Numeric">GA</th>
-              <th className="Numeric">GD</th>
-              <th className="Numeric">Points</th>
+              <th className="numeric">Played</th>
+              <th className="numeric">Wins</th>
+              <th className="numeric">Draws</th>
+              <th className="numeric">Losses</th>
+              <th className="numeric">GF</th>
+              <th className="numeric">GA</th>
+              <th className="numeric">GD</th>
+              <th className="numeric">Points</th>
             </tr>
           </thead>
           <tbody>

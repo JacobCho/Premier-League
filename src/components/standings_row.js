@@ -3,6 +3,19 @@ import { Link } from 'react-router-dom';
 import '../styles/standings.css';
 
 export class StandingsRow extends Component {
+  getQualifyRow() {
+    const team = this.props.team;
+    const qualify = team.position < 5 ? "cl" : team.position < 6 ? "el" : "";
+    var qualifyLogo = qualify === "cl" ? "https://seeklogo.com/images/U/UEFA_Champions_League-logo-DD9AE0500D-seeklogo.com.png" : 
+                      qualify === "el" ? "https://www.seeklogo.net/wp-content/uploads/2016/11/uefa-europa-league-logo-preview.png" :
+                      "";
+    if (qualifyLogo !== "") {
+      return <img src={qualifyLogo} className="standings-icon" alt="qualify"/>;
+    } else {
+      return <div></div>;
+    }
+  }
+
   render() {
     const team = this.props.team;
     const link = team._links.team.href;
@@ -10,6 +23,7 @@ export class StandingsRow extends Component {
     return (
       <tr>
         <td><h5>{team.position}</h5></td>
+        <td>{this.getQualifyRow()}</td>
         <td><img src={team.crestURI} className="standings-icon" alt=""/></td>
         <td className="club-name">
           <h5>
