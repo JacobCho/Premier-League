@@ -10,7 +10,7 @@ class Standings extends Component {
   }
 
   renderBody(team) {
-    return <StandingsRow team={team} key={team.teamName} />;
+    return <StandingsRow team={team} key={team.teamName}/>;
   }
 
   render() {
